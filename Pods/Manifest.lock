@@ -1,0 +1,16 @@
+PODS:
+  - FDWaveformView (3.0.1)
+
+DEPENDENCIES:
+  - FDWaveformView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FDWaveformView
+
+SPEC CHECKSUMS:
+  FDWaveformView: 382333698e71680953f115e4c6faeb63a8cfde74
+
+PODFILE CHECKSUM: dfd071f9217472f945f08ac1af64dd37df620857
+
+COCOAPODS: 1.5.3
