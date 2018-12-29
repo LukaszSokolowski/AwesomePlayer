@@ -15,9 +15,15 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
 
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var coverImageWave: FDWaveformView!
-
+    @IBOutlet weak var progressView: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        songNameLabel.text = songs[currentSong]
+        setCoverImage()
+        timeHandler()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         songNameLabel.text = songs[currentSong]
         setCoverImage()
     }
@@ -65,10 +71,28 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         }
     }
     
-    
-    @IBAction func notifyMe(_ sender: Any) {
-        scheduleNotification()
+    @IBAction func fastBackward(_ sender: Any) {
+        print("wtf")
+        var time: TimeInterval = audioPlayer.currentTime
+        time -= 5.0
+        if time >= 0 {
+          audioPlayer.currentTime = time
+        }
+        else{
+            
+        }
     }
+
+    @IBAction func fastForward(_ sender: Any) {
+        var time: TimeInterval = audioPlayer.currentTime
+        time += 5.0 // Go forward by 5 seconds
+        if time <= audioPlayer.duration {
+           audioPlayer.currentTime = time
+        }else {
+           
+        }
+    }
+    
     
     func scheduleNotification() {
         let center = UNUserNotificationCenter.current()
@@ -115,11 +139,31 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             self.coverImageWave.audioURL = url
             coverImageWave.reloadInputViews()
             audioPlayer.play()
+            timeHandler()
             
         } catch {
             print("ERROR")
         }
     }
+    
+    @objc func updateAudioProgressView()
+    {
+        if audioPlayer.isPlaying
+        {
+            progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: true)
+        }
+    }
+    
+    func timeHandler() {
+        let state = UIApplication.shared.applicationState
+        if state != .background {
+            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateAudioProgressView), userInfo: nil, repeats: true)
+            progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: false)
+        }
+    }
+    
+    
+    
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("JESTEM")

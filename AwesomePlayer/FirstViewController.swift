@@ -23,6 +23,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         gettingSongName()
+        defaultAudioSettings()
     }
     
     func gettingSongName() {
@@ -75,6 +76,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         center.setNotificationCategories([category])
     }
     
+    func defaultAudioSettings() {
+        do {
+            let audioPath = Bundle.main.path(forResource: songs[0], ofType: ".mp3")
+            try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
+            audioPlayer.delegate = self
+            audioStuffed = true
+        } catch {
+            print("ERROR")
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
@@ -96,7 +108,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         do {
             let audioPath = Bundle.main.path(forResource: songs[indexPath.row], ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
-           
             audioPlayer.delegate = self
             audioPlayer.play()
             currentSong = indexPath.row
