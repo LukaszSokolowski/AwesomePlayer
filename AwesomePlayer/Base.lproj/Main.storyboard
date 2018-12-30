@@ -20,14 +20,15 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lII-Tf-9Jk">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.94029109050000004" blue="0.51967401739999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="96" id="MIK-wT-lh0">
                                         <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIK-wT-lh0" id="Aqe-ip-yI6">
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIK-wT-lh0" id="Aqe-ip-yI6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -37,7 +38,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.94029109050000004" blue="0.51967401739999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="lII-Tf-9Jk" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="2Ol-yE-TdZ"/>
                             <constraint firstItem="lII-Tf-9Jk" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="4E0-My-sp2"/>
@@ -48,7 +49,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="All your songs" image="music-player (1)" landscapeImage="iconfinder_Party_Newyears_Vinyl_Cassete_2817111 (1)" largeContentSizeImage="iconfinder_Party_Newyears_Vinyl_Cassete_2817111 (1)" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="backgroundFirstView" destination="tsR-hK-woN" id="H2d-Kh-KP9"/>
                         <outlet property="myTableView" destination="lII-Tf-9Jk" id="Q4Z-Ii-AFv"/>
+                        <outlet property="tabBar" destination="acW-dT-cKf" id="NOZ-Zl-cXH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -118,7 +121,8 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUp-dI-Sty" customClass="FDWaveformView" customModule="FDWaveformView">
                                 <rect key="frame" x="0.0" y="92" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.90619445467504711" green="1" blue="0.97776907593763696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.87114342659999999" blue="0.40602963720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.9912648167" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="p0i-jj-6yS"/>
                                 </constraints>
@@ -164,7 +168,7 @@
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" red="0.81994263962416591" green="1" blue="0.98088472011264138" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="0.94029109048165427" blue="0.51967401741603514" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="TAk-dZ-vTa" firstAttribute="top" secondItem="seW-to-2bL" secondAttribute="bottom" constant="50" id="2n5-ps-6ei"/>
                             <constraint firstItem="oEF-j1-QrY" firstAttribute="top" secondItem="seW-to-2bL" secondAttribute="bottom" constant="50" id="53H-SS-UfR"/>
@@ -215,7 +219,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.9912648167" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.9912648167207625" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.9912648167" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>

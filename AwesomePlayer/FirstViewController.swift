@@ -20,10 +20,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var myTableView: UITableView!
     
+    @IBOutlet var backgroundFirstView: UIView!
+    @IBOutlet weak var tabBar: UITabBarItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gettingSongName()
        defaultAudioSettings()
+        backgroundFirstView.layer.cornerRadius = 10
     }
     
     func gettingSongName() {
@@ -94,6 +98,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.text = songs[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 24)
+        cell.contentView.backgroundColor = UIColor(red: 255/255, green: 222/255, blue: 104/255, alpha: 1)
+        cell.contentView.layer.cornerRadius = 5
+        cell.contentView.layer.borderWidth = 0.2
+        cell.backgroundColor =  UIColor(red: 255/255, green: 222/255, blue: 104/255, alpha: 1)
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

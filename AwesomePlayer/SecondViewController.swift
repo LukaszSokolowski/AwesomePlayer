@@ -23,7 +23,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     override func viewDidLoad() {
         super.viewDidLoad()
         songNameLabel.text = songs[currentSong]
-        setSongNameLabel()
+        setLayout()
         setCoverImage()
         timeHandler()
        
@@ -54,10 +54,11 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             do {
                 try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
                 try AVAudioSession.sharedInstance().setActive(true)
+                
             } catch {
                 print(error)
             }
-             audioPlayer.play()
+             playThis(thisOne: songs[currentSong])
         }
     }
     
@@ -106,7 +107,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     }
     
     @IBAction func fastBackward(_ sender: Any) {
-        print("wtf")
         var time: TimeInterval = audioPlayer.currentTime
         time -= 5.0
         if time >= 0 {
@@ -126,10 +126,9 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
            
         }
     }
-    func setSongNameLabel() {
+    func setLayout() {
         songNameLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 40)
         coverImageWave.layer.borderWidth = 1
-       // coverImageWave.layer.cornerRadius = 10
         backgroundView.layer.cornerRadius = 10
         coverImageWave.layer.shadowColor = UIColor.black.cgColor
         coverImageWave.layer.shadowRadius = 4.0
@@ -192,8 +191,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     
     @objc func updateAudioProgressView()
     {
-        if audioPlayer.isPlaying
-        {
+        if audioPlayer.isPlaying {
             progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: true)
         }
     }
@@ -201,7 +199,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     func timeHandler() {
         let state = UIApplication.shared.applicationState
         if state != .background {
-            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateAudioProgressView), userInfo: nil, repeats: true)
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateAudioProgressView), userInfo: nil, repeats: true)
             progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: false)
         }
     }
@@ -215,6 +213,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             currentSong += 1
             playThis(thisOne: songs[currentSong])
             songNameLabel.text = songs[currentSong]
+            songNameLabel.reloadInputViews()
             audioPlayer.play()
         }
         else {
@@ -224,9 +223,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         let state = UIApplication.shared.applicationState
         if state == .background {
             print("App in Background")
-            //SEND NOTIFICATION ABOUT NEXT SONG
             scheduleNotification()
-           
         }
     }
 
