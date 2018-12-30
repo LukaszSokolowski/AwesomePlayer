@@ -133,6 +133,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="11L-Lp-bHN"/>
                                 </constraints>
+                                <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l4-2C-p2b">
                                 <rect key="frame" x="231.5" y="374" width="56" height="56"/>
@@ -163,8 +165,19 @@
                                     <constraint firstAttribute="height" constant="47" id="f0K-Wu-8Uu"/>
                                 </constraints>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
                                     <action selector="volumeSlider:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Mxr-yw-NvH"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-cm-U09">
+                                <rect key="frame" x="7" y="545" width="361" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="rateSlider:" destination="8rJ-Kc-sve" eventType="valueChanged" id="z1f-gP-mgj"/>
                                 </connections>
                             </slider>
                         </subviews>
@@ -205,6 +218,7 @@
                         <outlet property="pausebutton" destination="UCb-zr-e8Y" id="Y06-B7-LX9"/>
                         <outlet property="playButton" destination="US0-NA-qtb" id="pQl-uc-9nW"/>
                         <outlet property="progressView" destination="seW-to-2bL" id="fv8-KO-6bk"/>
+                        <outlet property="sliderRate" destination="9W1-cm-U09" id="aHL-ti-NeS"/>
                         <outlet property="songNameLabel" destination="oTH-EM-HAT" id="PRZ-gc-ur7"/>
                     </connections>
                 </viewController>

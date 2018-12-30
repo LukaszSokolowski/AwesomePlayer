@@ -12,12 +12,13 @@ import FDWaveformView
 import UserNotifications
 
 class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotificationCenterDelegate {
-
+    
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var coverImageWave: FDWaveformView!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var sliderRate: UISlider!
     
     @IBOutlet weak var pausebutton: UIButton!
     override func viewDidLoad() {
@@ -26,11 +27,16 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         setLayout()
         setCoverImage()
         timeHandler()
-       
+        
+        audioPlayer.delegate = self
+        audioPlayer.enableRate = true
+        audioPlayer.rate = sliderRate.value
     }
     override func viewWillAppear(_ animated: Bool) {
         songNameLabel.text = songs[currentSong]
         setCoverImage()
+        audioPlayer.rate = sliderRate.value
+        
         if audioPlayer.isPlaying {
             playButton.isHidden = true
             pausebutton.isHidden = false
@@ -81,7 +87,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             playThis(thisOne: songs[currentSong-1])
             currentSong -= 1
             songNameLabel.text = songs[currentSong]
-            
         }
         else {
             
@@ -126,6 +131,12 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
            
         }
     }
+    
+    @IBAction func rateSlider(_ slider: UISlider) {
+        audioPlayer.enableRate = true
+        audioPlayer.rate = slider.value
+    }
+    
     func setLayout() {
         songNameLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 40)
         coverImageWave.layer.borderWidth = 1
@@ -139,7 +150,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     
     func scheduleNotification() {
         let center = UNUserNotificationCenter.current()
-        
         let content = UNMutableNotificationContent()
         content.title = "Now playing"
         content.body = songs[currentSong]
@@ -176,11 +186,12 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         do {
             let audioPath = Bundle.main.path(forResource: thisOne, ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
-            audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             let url = Bundle(for: type(of: self)).url(forResource: songs[currentSong], withExtension: ".mp3")
             self.coverImageWave.audioURL = url
             coverImageWave.reloadInputViews()
+            audioPlayer.enableRate = true
+            audioPlayer.rate = sliderRate.value
             audioPlayer.play()
             timeHandler()
             

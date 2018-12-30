@@ -122,6 +122,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             audioPlayer.play()
             currentSong = indexPath.row
             audioStuffed = true
+            audioPlayer.enableRate = true
            
         } catch {
             print("ERROR")
