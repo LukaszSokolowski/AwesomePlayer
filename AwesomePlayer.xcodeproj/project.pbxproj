@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2132A6D721D6AE3300F32C17 /* SampleAudio_0.4mb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2132A6D621D6AE3300F32C17 /* SampleAudio_0.4mb.mp3 */; };
+		2132A6D721D6AE3300F32C17 /* SampleAudioKlapKlask.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2132A6D621D6AE3300F32C17 /* SampleAudioKlapKlask.mp3 */; };
 		2151705B21D513C1004D971F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151705A21D513C1004D971F /* AppDelegate.swift */; };
 		2151705D21D513C1004D971F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151705C21D513C1004D971F /* FirstViewController.swift */; };
 		2151705F21D513C1004D971F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151705E21D513C1004D971F /* SecondViewController.swift */; };
 		2151706221D513C1004D971F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2151706021D513C1004D971F /* Main.storyboard */; };
-		2151706421D513C3004D971F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2151706321D513C3004D971F /* Assets.xcassets */; };
 		2151706721D513C3004D971F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2151706521D513C3004D971F /* LaunchScreen.storyboard */; };
 		2151707221D513C3004D971F /* AwesomePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151707121D513C3004D971F /* AwesomePlayerTests.swift */; };
 		2151707D21D513C3004D971F /* AwesomePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151707C21D513C3004D971F /* AwesomePlayerUITests.swift */; };
-		217D31D821D711EF00A0E888 /* BronarPad-05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31D721D711EF00A0E888 /* BronarPad-05.mp3 */; };
+		2159174021D8D9C300CC8A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2159173F21D8D9C200CC8A1A /* Assets.xcassets */; };
+		217D31D821D711EF00A0E888 /* BronarPad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31D721D711EF00A0E888 /* BronarPad.mp3 */; };
 		217D31DC21D7136400A0E888 /* DarkBells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31D921D7136400A0E888 /* DarkBells.mp3 */; };
-		217D31DD21D7136400A0E888 /* Orgonite-05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31DA21D7136400A0E888 /* Orgonite-05.mp3 */; };
-		217D31DE21D7136400A0E888 /* SynMos A12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31DB21D7136400A0E888 /* SynMos A12.mp3 */; };
+		217D31DD21D7136400A0E888 /* Orgonite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31DA21D7136400A0E888 /* Orgonite.mp3 */; };
+		217D31DE21D7136400A0E888 /* Synthesis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31DB21D7136400A0E888 /* Synthesis.mp3 */; };
 		682C896D1656731B615422ED /* Pods_AwesomePlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA9B95D9C4A4CA4D8F8F4F8 /* Pods_AwesomePlayerUITests.framework */; };
 		E02A591C5A1272C096DB2939 /* Pods_AwesomePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC7F31012B865D3E2082CD3 /* Pods_AwesomePlayer.framework */; };
 		E2E817087C9C056FD39121D1 /* Pods_AwesomePlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1E0326742304189647CF4C /* Pods_AwesomePlayerTests.framework */; };
@@ -44,13 +44,12 @@
 
 /* Begin PBXFileReference section */
 		0D758E87B60785428AAF68CB /* Pods-AwesomePlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomePlayerUITests/Pods-AwesomePlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2132A6D621D6AE3300F32C17 /* SampleAudio_0.4mb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SampleAudio_0.4mb.mp3; sourceTree = "<group>"; };
+		2132A6D621D6AE3300F32C17 /* SampleAudioKlapKlask.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SampleAudioKlapKlask.mp3; sourceTree = "<group>"; };
 		2151705721D513C1004D971F /* AwesomePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2151705A21D513C1004D971F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2151705C21D513C1004D971F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		2151705E21D513C1004D971F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2151706121D513C1004D971F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2151706321D513C3004D971F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2151706621D513C3004D971F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2151706821D513C3004D971F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2151706D21D513C3004D971F /* AwesomePlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomePlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,10 +58,11 @@
 		2151707821D513C3004D971F /* AwesomePlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomePlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2151707C21D513C3004D971F /* AwesomePlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomePlayerUITests.swift; sourceTree = "<group>"; };
 		2151707E21D513C3004D971F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		217D31D721D711EF00A0E888 /* BronarPad-05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "BronarPad-05.mp3"; sourceTree = "<group>"; };
+		2159173F21D8D9C200CC8A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		217D31D721D711EF00A0E888 /* BronarPad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BronarPad.mp3; sourceTree = "<group>"; };
 		217D31D921D7136400A0E888 /* DarkBells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DarkBells.mp3; sourceTree = "<group>"; };
-		217D31DA21D7136400A0E888 /* Orgonite-05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Orgonite-05.mp3"; sourceTree = "<group>"; };
-		217D31DB21D7136400A0E888 /* SynMos A12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "SynMos A12.mp3"; sourceTree = "<group>"; };
+		217D31DA21D7136400A0E888 /* Orgonite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Orgonite.mp3; sourceTree = "<group>"; };
+		217D31DB21D7136400A0E888 /* Synthesis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Synthesis.mp3; sourceTree = "<group>"; };
 		24DED517B4E9D1E404938442 /* Pods-AwesomePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomePlayer/Pods-AwesomePlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		33461E679DC902339442D26D /* Pods-AwesomePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomePlayer/Pods-AwesomePlayer.release.xcconfig"; sourceTree = "<group>"; };
 		3E6F24335E7094AE0D669FD6 /* Pods-AwesomePlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomePlayerTests/Pods-AwesomePlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				2151705C21D513C1004D971F /* FirstViewController.swift */,
 				2151705E21D513C1004D971F /* SecondViewController.swift */,
 				2151706021D513C1004D971F /* Main.storyboard */,
-				2151706321D513C3004D971F /* Assets.xcassets */,
+				2159173F21D8D9C200CC8A1A /* Assets.xcassets */,
 				2151706521D513C3004D971F /* LaunchScreen.storyboard */,
 				2151706821D513C3004D971F /* Info.plist */,
 				2151708C21D51680004D971F /* Music */,
@@ -169,11 +169,11 @@
 		2151708C21D51680004D971F /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				217D31D721D711EF00A0E888 /* BronarPad-05.mp3 */,
+				217D31D721D711EF00A0E888 /* BronarPad.mp3 */,
 				217D31D921D7136400A0E888 /* DarkBells.mp3 */,
-				217D31DA21D7136400A0E888 /* Orgonite-05.mp3 */,
-				217D31DB21D7136400A0E888 /* SynMos A12.mp3 */,
-				2132A6D621D6AE3300F32C17 /* SampleAudio_0.4mb.mp3 */,
+				217D31DA21D7136400A0E888 /* Orgonite.mp3 */,
+				217D31DB21D7136400A0E888 /* Synthesis.mp3 */,
+				2132A6D621D6AE3300F32C17 /* SampleAudioKlapKlask.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -305,13 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2151706721D513C3004D971F /* LaunchScreen.storyboard in Resources */,
-				2132A6D721D6AE3300F32C17 /* SampleAudio_0.4mb.mp3 in Resources */,
-				217D31DE21D7136400A0E888 /* SynMos A12.mp3 in Resources */,
-				2151706421D513C3004D971F /* Assets.xcassets in Resources */,
+				2132A6D721D6AE3300F32C17 /* SampleAudioKlapKlask.mp3 in Resources */,
+				217D31DE21D7136400A0E888 /* Synthesis.mp3 in Resources */,
 				2151706221D513C1004D971F /* Main.storyboard in Resources */,
 				217D31DC21D7136400A0E888 /* DarkBells.mp3 in Resources */,
-				217D31DD21D7136400A0E888 /* Orgonite-05.mp3 in Resources */,
-				217D31D821D711EF00A0E888 /* BronarPad-05.mp3 in Resources */,
+				217D31DD21D7136400A0E888 /* Orgonite.mp3 in Resources */,
+				2159174021D8D9C300CC8A1A /* Assets.xcassets in Resources */,
+				217D31D821D711EF00A0E888 /* BronarPad.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

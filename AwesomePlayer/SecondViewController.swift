@@ -16,26 +16,60 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var coverImageWave: FDWaveformView!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet var backgroundView: UIView!
+    @IBOutlet weak var playButton: UIButton!
     
+    @IBOutlet weak var pausebutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         songNameLabel.text = songs[currentSong]
+        setSongNameLabel()
         setCoverImage()
         timeHandler()
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         songNameLabel.text = songs[currentSong]
         setCoverImage()
+        if audioPlayer.isPlaying {
+            playButton.isHidden = true
+            pausebutton.isHidden = false
+        }
+        else {
+            playButton.isHidden = false
+            pausebutton.isHidden = true
+        }
     }
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
+        if audioPlayer.isPlaying {
+            playButton.isHidden = true
+            pausebutton.isHidden = false
+        }
+        else {
+            playButton.isHidden = true
+            pausebutton.isHidden = false
+        }
         if audioStuffed && !audioPlayer.isPlaying {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch {
+                print(error)
+            }
              audioPlayer.play()
         }
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
-      
+        if !audioPlayer.isPlaying {
+            playButton.isHidden = false
+            pausebutton.isHidden = true
+        }
+        else {
+            playButton.isHidden = false
+            pausebutton.isHidden = true
+        }
         if audioStuffed && audioPlayer.isPlaying {
             audioPlayer.pause()
         }
@@ -92,7 +126,17 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
            
         }
     }
-    
+    func setSongNameLabel() {
+        songNameLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 40)
+        coverImageWave.layer.borderWidth = 1
+       // coverImageWave.layer.cornerRadius = 10
+        backgroundView.layer.cornerRadius = 10
+        coverImageWave.layer.shadowColor = UIColor.black.cgColor
+        coverImageWave.layer.shadowRadius = 4.0
+        coverImageWave.layer.shadowOpacity = 1.0
+        coverImageWave.layer.shadowOffset = CGSize(width: 5, height: 9)
+        coverImageWave.layer.masksToBounds = false
+    }
     
     func scheduleNotification() {
         let center = UNUserNotificationCenter.current()

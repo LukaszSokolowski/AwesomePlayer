@@ -23,7 +23,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         gettingSongName()
-        defaultAudioSettings()
+       defaultAudioSettings()
     }
     
     func gettingSongName() {
