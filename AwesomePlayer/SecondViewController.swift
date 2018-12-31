@@ -83,6 +83,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             playThis(thisOne: songs[currentSong-1])
             currentSong -= 1
             songNameLabel.text = songs[currentSong]
+            setCoverImage()
         }
         else {
             
@@ -95,6 +96,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             playThis(thisOne: songs[currentSong+1])
             currentSong += 1
             songNameLabel.text = songs[currentSong]
+            setCoverImage()
         }
         else {
             
@@ -181,12 +183,11 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             audioPlayer.prepareToPlay()
             audioPlayer.delegate = self
             audioPlayer.enableRate = true
-            let url = Bundle(for: type(of: self)).url(forResource: songs[currentSong], withExtension: ".mp3")
-            self.coverImageWave.audioURL = url
+            setCoverImage()
             audioPlayer.rate = sliderRate.value
-            coverImageWave.reloadInputViews()
+            songNameLabel.text = songs[currentSong]
+            songNameLabel.reloadInputViews()
             audioPlayer.play()
-            
             timeHandler()
             
         } catch {
@@ -214,9 +215,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         if currentSong < songs.count-1 {
             print("JESTEM 2")
             currentSong += 1
-            songNameLabel.text = songs[currentSong]
-            songNameLabel.reloadInputViews()
-            coverImageWave.reloadInputViews()
             playThis(thisOne: songs[currentSong])
 
         }
