@@ -27,9 +27,9 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         setLayout()
         setCoverImage()
         timeHandler()
-       // audioPlayer.enableRate = true
     }
     override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self,selector: #selector(update), name: NSNotification.Name(rawValue: "refresh"), object: nil)
         songNameLabel.text = songs[currentSong]
         setCoverImage()
         audioPlayer.enableRate = true
@@ -86,7 +86,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             setCoverImage()
         }
         else {
-            
         }
     }
     
@@ -99,7 +98,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             setCoverImage()
         }
         else {
-            
         }
     }
     
@@ -110,7 +108,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
           audioPlayer.currentTime = time
         }
         else{
-            
         }
     }
 
@@ -125,7 +122,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     }
     
     @IBAction func rateSlider(_ slider: UISlider) {
-        //audioPlayer.delegate = self
          audioPlayer.rate = slider.value
     }
     @IBAction func channelSlider(_ sender: UISlider) {
@@ -175,9 +171,15 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         coverImageWave.reloadInputViews()
     }
     
+    @objc func update() {
+        let url = Bundle(for: type(of: self)).url(forResource: songs[currentSong], withExtension: ".mp3")
+        self.coverImageWave.audioURL = url
+        coverImageWave.reloadInputViews()
+        songNameLabel.text = songs[currentSong]
+    }
+    
     func playThis(thisOne: String) {
         do {
-            
             let audioPath = Bundle.main.path(forResource: thisOne, ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
             audioPlayer.prepareToPlay()
@@ -216,7 +218,6 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             print("JESTEM 2")
             currentSong += 1
             playThis(thisOne: songs[currentSong])
-
         }
         else {
             

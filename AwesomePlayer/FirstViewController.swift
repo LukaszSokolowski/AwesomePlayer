@@ -112,7 +112,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        print("JESTEM")
+        print("JESTEM1")
         if currentSong < songs.count-1 {
             do {
                 currentSong += 1
@@ -120,6 +120,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
                 audioPlayer.delegate = self
                 audioPlayer.enableRate = true
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
+
                 audioPlayer.prepareToPlay()
                 audioPlayer.play()
             } catch {
