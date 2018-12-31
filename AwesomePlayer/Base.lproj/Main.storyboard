@@ -158,8 +158,8 @@
                                     <action selector="fastBackward:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="xDw-v2-0z7"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="mute (3)" maximumValueImage="volume-up" translatesAutoresizingMaskIntoConstraints="NO" id="yu3-1i-hDd">
-                                <rect key="frame" x="7" y="470" width="361" height="48"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="mute (3)" maximumValueImage="volume-up" translatesAutoresizingMaskIntoConstraints="NO" id="yu3-1i-hDd">
+                                <rect key="frame" x="6" y="470" width="361" height="48"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="f0K-Wu-8Uu"/>
@@ -170,9 +170,23 @@
                                     <action selector="volumeSlider:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Mxr-yw-NvH"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-cm-U09">
-                                <rect key="frame" x="7" y="545" width="361" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" minimumValueImage="iconfinder_letter_L_blue_1553049" maximumValueImage="iconfinder_letter_R_red_1553076" translatesAutoresizingMaskIntoConstraints="NO" id="Mn8-IS-cMy">
+                                <rect key="frame" x="7" y="567" width="361" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZYD-Xu-FYW"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="channelSlider:" destination="8rJ-Kc-sve" eventType="valueChanged" id="xTO-yr-KzJ"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" minimumValueImage="turtle.png" maximumValueImage="rabbit (1)" translatesAutoresizingMaskIntoConstraints="NO" id="9W1-cm-U09">
+                                <rect key="frame" x="7" y="525" width="361" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PWC-cx-gBB"/>
+                                </constraints>
                                 <color key="minimumTrackTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,14 +200,17 @@
                             <constraint firstItem="TAk-dZ-vTa" firstAttribute="top" secondItem="seW-to-2bL" secondAttribute="bottom" constant="50" id="2n5-ps-6ei"/>
                             <constraint firstItem="oEF-j1-QrY" firstAttribute="top" secondItem="seW-to-2bL" secondAttribute="bottom" constant="50" id="53H-SS-UfR"/>
                             <constraint firstItem="fUp-dI-Sty" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="5GR-6Q-DdF"/>
+                            <constraint firstItem="Mn8-IS-cMy" firstAttribute="top" secondItem="9W1-cm-U09" secondAttribute="bottom" constant="12" id="CUF-uR-wRf"/>
                             <constraint firstItem="fUp-dI-Sty" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="CUS-u8-ZYw"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="oTH-EM-HAT" secondAttribute="trailing" constant="16" id="Cwn-k2-5Uy"/>
                             <constraint firstItem="N4V-9D-Edb" firstAttribute="leading" secondItem="2l4-2C-p2b" secondAttribute="trailing" constant="16" id="EUf-hf-CbZ"/>
                             <constraint firstItem="TAk-dZ-vTa" firstAttribute="leading" secondItem="oEF-j1-QrY" secondAttribute="trailing" constant="16" id="Kd6-dB-faj"/>
                             <constraint firstItem="yu3-1i-hDd" firstAttribute="top" secondItem="US0-NA-qtb" secondAttribute="bottom" constant="40" id="Lvn-gM-aBb"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="9W1-cm-U09" secondAttribute="trailing" constant="9" id="MTg-od-ehQ"/>
                             <constraint firstItem="fUp-dI-Sty" firstAttribute="top" secondItem="oTH-EM-HAT" secondAttribute="bottom" constant="6" id="NkU-Qz-X1a"/>
                             <constraint firstItem="US0-NA-qtb" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="NmV-2E-Nhl"/>
                             <constraint firstItem="US0-NA-qtb" firstAttribute="leading" secondItem="TAk-dZ-vTa" secondAttribute="trailing" constant="16" id="P60-Ud-mDn"/>
+                            <constraint firstItem="9W1-cm-U09" firstAttribute="top" secondItem="yu3-1i-hDd" secondAttribute="bottom" constant="8" id="QhO-Qb-b5v"/>
                             <constraint firstItem="seW-to-2bL" firstAttribute="top" secondItem="fUp-dI-Sty" secondAttribute="bottom" constant="30" id="U2W-uX-ZQ6"/>
                             <constraint firstItem="2l4-2C-p2b" firstAttribute="top" secondItem="seW-to-2bL" secondAttribute="bottom" constant="50" id="U8e-gP-4EN"/>
                             <constraint firstItem="oTH-EM-HAT" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="16" id="VqO-pj-UpX"/>
@@ -201,9 +218,12 @@
                             <constraint firstItem="2l4-2C-p2b" firstAttribute="leading" secondItem="US0-NA-qtb" secondAttribute="trailing" constant="16" id="Xe0-r4-GB2"/>
                             <constraint firstItem="fUp-dI-Sty" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="XhV-0n-t5Q"/>
                             <constraint firstItem="oTH-EM-HAT" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="16" id="b34-Oa-Fhq"/>
+                            <constraint firstItem="Mn8-IS-cMy" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="9" id="iba-qZ-8nX"/>
                             <constraint firstItem="UCb-zr-e8Y" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="kjD-Si-WmY"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="yu3-1i-hDd" secondAttribute="trailing" constant="10" id="laA-Fs-3t4"/>
+                            <constraint firstItem="9W1-cm-U09" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="9" id="lmZ-wP-BPI"/>
                             <constraint firstItem="seW-to-2bL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="mac-EW-vg0"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Mn8-IS-cMy" secondAttribute="trailing" constant="9" id="pfO-Rn-jYR"/>
                             <constraint firstAttribute="trailing" secondItem="seW-to-2bL" secondAttribute="trailing" id="rot-BG-fgs"/>
                             <constraint firstItem="N4V-9D-Edb" firstAttribute="top" secondItem="seW-to-2bL" secondAttribute="bottom" constant="50" id="rvm-1i-eRk"/>
                             <constraint firstItem="yu3-1i-hDd" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="8" id="uY4-f2-Dme"/>
@@ -252,6 +272,8 @@
         <image name="fast-forward" width="96" height="96"/>
         <image name="fast-forward-1" width="96" height="96"/>
         <image name="iconfinder_Party_Newyears_Vinyl_Cassete_2817111 (1)" width="32" height="32"/>
+        <image name="iconfinder_letter_L_blue_1553049" width="32" height="32"/>
+        <image name="iconfinder_letter_R_red_1553076" width="32" height="32"/>
         <image name="icons8-sample-rate-filled-50 (1)" width="37.5" height="37.5"/>
         <image name="music-player (1)" width="24" height="24"/>
         <image name="mute (3)" width="24" height="24"/>
@@ -259,6 +281,8 @@
         <image name="next-1" width="96" height="96"/>
         <image name="pause (1)" width="96" height="96"/>
         <image name="play-button (1)" width="96" height="96"/>
+        <image name="rabbit (1)" width="24" height="24"/>
+        <image name="turtle.png" width="30" height="30"/>
         <image name="volume-up" width="24" height="24"/>
     </resources>
 </document>

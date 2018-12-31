@@ -27,15 +27,12 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         setLayout()
         setCoverImage()
         timeHandler()
-        
-        audioPlayer.delegate = self
-        audioPlayer.enableRate = true
-        audioPlayer.rate = sliderRate.value
+       // audioPlayer.enableRate = true
     }
     override func viewWillAppear(_ animated: Bool) {
         songNameLabel.text = songs[currentSong]
         setCoverImage()
-        audioPlayer.rate = sliderRate.value
+        audioPlayer.enableRate = true
         
         if audioPlayer.isPlaying {
             playButton.isHidden = true
@@ -60,11 +57,10 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             do {
                 try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
                 try AVAudioSession.sharedInstance().setActive(true)
-                
+                playThis(thisOne: songs[currentSong])
             } catch {
                 print(error)
             }
-             playThis(thisOne: songs[currentSong])
         }
     }
     
@@ -105,14 +101,8 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         }
     }
     
-    @IBAction func volumeSlider(_ sender: UISlider) {
-        if audioStuffed {
-            audioPlayer.volume = sender.value
-        }
-    }
-    
     @IBAction func fastBackward(_ sender: Any) {
-        var time: TimeInterval = audioPlayer.currentTime
+        var time = audioPlayer.currentTime
         time -= 5.0
         if time >= 0 {
           audioPlayer.currentTime = time
@@ -123,8 +113,8 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     }
 
     @IBAction func fastForward(_ sender: Any) {
-        var time: TimeInterval = audioPlayer.currentTime
-        time += 5.0 // Go forward by 5 seconds
+        var time = audioPlayer.currentTime
+        time += 5.0 
         if time <= audioPlayer.duration {
            audioPlayer.currentTime = time
         }else {
@@ -133,8 +123,16 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     }
     
     @IBAction func rateSlider(_ slider: UISlider) {
-        audioPlayer.enableRate = true
-        audioPlayer.rate = slider.value
+        //audioPlayer.delegate = self
+         audioPlayer.rate = slider.value
+    }
+    @IBAction func channelSlider(_ sender: UISlider) {
+        
+        audioPlayer.pan = sender.value
+    }
+    @IBAction func volumeSlider(_ sender: UISlider) {
+     
+        audioPlayer.volume = sender.value
     }
     
     func setLayout() {
@@ -156,9 +154,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default
-        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-        
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         center.add(request)
     }
@@ -166,33 +162,31 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     func registerCategories() {
         let center = UNUserNotificationCenter.current()
         center.delegate = self
-        
         let show = UNNotificationAction(identifier: "show", title: "Tell me more…", options: .foreground)
         let category = UNNotificationCategory(identifier: "alarm", actions: [show], intentIdentifiers: [])
-        
         center.setNotificationCategories([category])
     }
     
     func setCoverImage() {
         let url = Bundle(for: type(of: self)).url(forResource: songs[currentSong], withExtension: ".mp3")
-       // self.coverImageWave.doesAllowScrubbing = true
-       // self.coverImageWave.doesAllowStretch = true
-       // self.coverImageWave.doesAllowScroll = true
         self.coverImageWave.audioURL = url
         coverImageWave.reloadInputViews()
     }
     
     func playThis(thisOne: String) {
         do {
+            
             let audioPath = Bundle.main.path(forResource: thisOne, ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
             audioPlayer.prepareToPlay()
+            audioPlayer.delegate = self
+            audioPlayer.enableRate = true
             let url = Bundle(for: type(of: self)).url(forResource: songs[currentSong], withExtension: ".mp3")
             self.coverImageWave.audioURL = url
-            coverImageWave.reloadInputViews()
-            audioPlayer.enableRate = true
             audioPlayer.rate = sliderRate.value
+            coverImageWave.reloadInputViews()
             audioPlayer.play()
+            
             timeHandler()
             
         } catch {
@@ -216,16 +210,15 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     }
     
     
-    
-    
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        print("JESTEM")
         if currentSong < songs.count-1 {
+            print("JESTEM 2")
             currentSong += 1
-            playThis(thisOne: songs[currentSong])
             songNameLabel.text = songs[currentSong]
             songNameLabel.reloadInputViews()
-            audioPlayer.play()
+            coverImageWave.reloadInputViews()
+            playThis(thisOne: songs[currentSong])
+
         }
         else {
             
@@ -237,6 +230,5 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
             scheduleNotification()
         }
     }
-
 }
 

@@ -19,26 +19,22 @@ var numberOf = 0
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate,UNUserNotificationCenterDelegate {
 
     @IBOutlet weak var myTableView: UITableView!
-    
     @IBOutlet var backgroundFirstView: UIView!
     @IBOutlet weak var tabBar: UITabBarItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         gettingSongName()
-       defaultAudioSettings()
+        defaultAudioSettings()
         backgroundFirstView.layer.cornerRadius = 10
     }
     
     func gettingSongName() {
         let folderURL = URL(fileURLWithPath: Bundle.main.resourcePath!)
-        
         do {
             let songPath = try FileManager.default.contentsOfDirectory(at: folderURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
-            
             for song in songPath {
                 var mySong = song.absoluteString
-                
                 if mySong.contains(".mp3") {
                     let findString = mySong.components(separatedBy: "/")
                     mySong = findString[findString.count-1]
@@ -56,30 +52,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func scheduleNotification() {
         let center = UNUserNotificationCenter.current()
-        
         let content = UNMutableNotificationContent()
         content.title = "Now playing"
         content.body = songs[currentSong]
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default
-        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-        
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         center.add(request)
     }
-    
-    func registerCategories() {
-        let center = UNUserNotificationCenter.current()
-        center.delegate = self
-        
-        let show = UNNotificationAction(identifier: "show", title: "Tell me more…", options: .foreground)
-        let category = UNNotificationCategory(identifier: "alarm", actions: [show], intentIdentifiers: [])
-        
-        center.setNotificationCategories([category])
-    }
-    
+ 
     func defaultAudioSettings() {
         do {
             let audioPath = Bundle.main.path(forResource: songs[0], ofType: ".mp3")
@@ -119,11 +102,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let audioPath = Bundle.main.path(forResource: songs[indexPath.row], ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
             audioPlayer.delegate = self
+            audioPlayer.enableRate = true
             audioPlayer.play()
             currentSong = indexPath.row
             audioStuffed = true
-            audioPlayer.enableRate = true
-           
         } catch {
             print("ERROR")
         }
@@ -137,22 +119,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let audioPath = Bundle.main.path(forResource: songs[currentSong], ofType: ".mp3")
                 try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
                 audioPlayer.delegate = self
+                audioPlayer.enableRate = true
                 audioPlayer.prepareToPlay()
                 audioPlayer.play()
-                
             } catch {
                 print("ERROR")
             }
-            
         }
         else {
-            
         }
-        
         let state = UIApplication.shared.applicationState
         if state == .background {
             print("App in Background")
-            //SEND NOTIFICATION ABOUT NEXT SONG
             scheduleNotification()
         }
     }
