@@ -170,7 +170,7 @@
                                     <action selector="volumeSlider:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Mxr-yw-NvH"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" minimumValueImage="iconfinder_letter_L_blue_1553049" maximumValueImage="iconfinder_letter_R_red_1553076" translatesAutoresizingMaskIntoConstraints="NO" id="Mn8-IS-cMy">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" minimumValueImage="letter-l-32" maximumValueImage="letter-r-32" translatesAutoresizingMaskIntoConstraints="NO" id="Mn8-IS-cMy">
                                 <rect key="frame" x="7" y="567" width="361" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZYD-Xu-FYW"/>
@@ -272,9 +272,9 @@
         <image name="fast-forward" width="96" height="96"/>
         <image name="fast-forward-1" width="96" height="96"/>
         <image name="iconfinder_Party_Newyears_Vinyl_Cassete_2817111 (1)" width="32" height="32"/>
-        <image name="iconfinder_letter_L_blue_1553049" width="32" height="32"/>
-        <image name="iconfinder_letter_R_red_1553076" width="32" height="32"/>
         <image name="icons8-sample-rate-filled-50 (1)" width="37.5" height="37.5"/>
+        <image name="letter-l-32" width="24" height="24"/>
+        <image name="letter-r-32" width="24" height="24"/>
         <image name="music-player (1)" width="24" height="24"/>
         <image name="mute (3)" width="24" height="24"/>
         <image name="next" width="96" height="96"/>
