@@ -134,9 +134,9 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     }
     
     func setLayout() {
-        songNameLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 40)
-        coverImageWave.layer.borderWidth = 1
+        songNameLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 25)
         backgroundView.layer.cornerRadius = 10
+        coverImageWave.layer.borderWidth = 1
         coverImageWave.layer.shadowColor = UIColor.black.cgColor
         coverImageWave.layer.shadowRadius = 4.0
         coverImageWave.layer.shadowOpacity = 1.0

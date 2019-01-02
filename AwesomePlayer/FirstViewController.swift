@@ -120,9 +120,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!)as URL)
                 audioPlayer.delegate = self
                 audioPlayer.enableRate = true
-                
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
-
                 audioPlayer.prepareToPlay()
                 audioPlayer.play()
             } catch {
