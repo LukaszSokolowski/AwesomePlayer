@@ -147,7 +147,7 @@ class SecondViewController: UIViewController, AVAudioPlayerDelegate,UNUserNotifi
     func scheduleNotification() {
         let center = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
-        content.title = "Now playing"
+        content.title = "(｡◕‿‿◕｡)♫"
         content.body = songs[currentSong]
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]

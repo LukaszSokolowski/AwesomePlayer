@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21047A0621DC0EBE0094FE20 /* 02-Welwetowe Swetry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 210479FE21DC0EBD0094FE20 /* 02-Welwetowe Swetry.mp3 */; };
-		21047A0721DC0EBE0094FE20 /* 11-Co Za Dzien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 210479FF21DC0EBD0094FE20 /* 11-Co Za Dzien.mp3 */; };
-		21047A0821DC0EBE0094FE20 /* 03-Lewa Marsz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21047A0021DC0EBD0094FE20 /* 03-Lewa Marsz.mp3 */; };
-		21047A0921DC0EBE0094FE20 /* 04-Zapowiedz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21047A0121DC0EBD0094FE20 /* 04-Zapowiedz.mp3 */; };
-		21047A0A21DC0EBE0094FE20 /* 13-Na Bliskim Wschodzie (Brak cover).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21047A0221DC0EBE0094FE20 /* 13-Na Bliskim Wschodzie (Brak cover).mp3 */; };
-		21047A0B21DC0EBE0094FE20 /* 06-Szaolne Lato.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21047A0321DC0EBE0094FE20 /* 06-Szaolne Lato.mp3 */; };
-		21047A0C21DC0EBE0094FE20 /* 05-Wariat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21047A0421DC0EBE0094FE20 /* 05-Wariat.mp3 */; };
-		21047A0D21DC0EBE0094FE20 /* 07-Permamentna Rewolucja.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21047A0521DC0EBE0094FE20 /* 07-Permamentna Rewolucja.mp3 */; };
 		2132A6D721D6AE3300F32C17 /* SampleAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2132A6D621D6AE3300F32C17 /* SampleAudio.mp3 */; };
 		2151705B21D513C1004D971F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151705A21D513C1004D971F /* AppDelegate.swift */; };
 		2151705D21D513C1004D971F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151705C21D513C1004D971F /* FirstViewController.swift */; };
@@ -25,6 +17,11 @@
 		2151707D21D513C3004D971F /* AwesomePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151707C21D513C3004D971F /* AwesomePlayerUITests.swift */; };
 		2159174021D8D9C300CC8A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2159173F21D8D9C200CC8A1A /* Assets.xcassets */; };
 		215D75AC21D93EB700FD1728 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 215D75AB21D93EB700FD1728 /* turtle.png */; };
+		2169230721E2DC9F00E3A98D /* 07023360.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2169230221E2DC9E00E3A98D /* 07023360.wav */; };
+		2169230821E2DC9F00E3A98D /* airplane-landing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2169230321E2DC9E00E3A98D /* airplane-landing.mp3 */; };
+		2169230921E2DC9F00E3A98D /* BOMB_SIREN.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2169230421E2DC9E00E3A98D /* BOMB_SIREN.mp3 */; };
+		2169230A21E2DC9F00E3A98D /* sos-morse-code.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2169230521E2DC9F00E3A98D /* sos-morse-code.mp3 */; };
+		2169230B21E2DC9F00E3A98D /* muscle-car.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2169230621E2DC9F00E3A98D /* muscle-car.mp3 */; };
 		217D31D821D711EF00A0E888 /* BronarPad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31D721D711EF00A0E888 /* BronarPad.mp3 */; };
 		217D31DC21D7136400A0E888 /* DarkBells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31D921D7136400A0E888 /* DarkBells.mp3 */; };
 		217D31DD21D7136400A0E888 /* Orgonite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 217D31DA21D7136400A0E888 /* Orgonite.mp3 */; };
@@ -53,14 +50,6 @@
 
 /* Begin PBXFileReference section */
 		0D758E87B60785428AAF68CB /* Pods-AwesomePlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomePlayerUITests/Pods-AwesomePlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		210479FE21DC0EBD0094FE20 /* 02-Welwetowe Swetry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02-Welwetowe Swetry.mp3"; sourceTree = "<group>"; };
-		210479FF21DC0EBD0094FE20 /* 11-Co Za Dzien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "11-Co Za Dzien.mp3"; sourceTree = "<group>"; };
-		21047A0021DC0EBD0094FE20 /* 03-Lewa Marsz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03-Lewa Marsz.mp3"; sourceTree = "<group>"; };
-		21047A0121DC0EBD0094FE20 /* 04-Zapowiedz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "04-Zapowiedz.mp3"; sourceTree = "<group>"; };
-		21047A0221DC0EBE0094FE20 /* 13-Na Bliskim Wschodzie (Brak cover).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13-Na Bliskim Wschodzie (Brak cover).mp3"; sourceTree = "<group>"; };
-		21047A0321DC0EBE0094FE20 /* 06-Szaolne Lato.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06-Szaolne Lato.mp3"; sourceTree = "<group>"; };
-		21047A0421DC0EBE0094FE20 /* 05-Wariat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05-Wariat.mp3"; sourceTree = "<group>"; };
-		21047A0521DC0EBE0094FE20 /* 07-Permamentna Rewolucja.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07-Permamentna Rewolucja.mp3"; sourceTree = "<group>"; };
 		2132A6D621D6AE3300F32C17 /* SampleAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SampleAudio.mp3; sourceTree = "<group>"; };
 		2151705721D513C1004D971F /* AwesomePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2151705A21D513C1004D971F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +66,11 @@
 		2151707E21D513C3004D971F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2159173F21D8D9C200CC8A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		215D75AB21D93EB700FD1728 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
+		2169230221E2DC9E00E3A98D /* 07023360.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07023360.wav; sourceTree = "<group>"; };
+		2169230321E2DC9E00E3A98D /* airplane-landing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "airplane-landing.mp3"; sourceTree = "<group>"; };
+		2169230421E2DC9E00E3A98D /* BOMB_SIREN.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BOMB_SIREN.mp3; sourceTree = "<group>"; };
+		2169230521E2DC9F00E3A98D /* sos-morse-code.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sos-morse-code.mp3"; sourceTree = "<group>"; };
+		2169230621E2DC9F00E3A98D /* muscle-car.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "muscle-car.mp3"; sourceTree = "<group>"; };
 		217D31D721D711EF00A0E888 /* BronarPad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BronarPad.mp3; sourceTree = "<group>"; };
 		217D31D921D7136400A0E888 /* DarkBells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DarkBells.mp3; sourceTree = "<group>"; };
 		217D31DA21D7136400A0E888 /* Orgonite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Orgonite.mp3; sourceTree = "<group>"; };
@@ -190,15 +184,12 @@
 			children = (
 				217D31D721D711EF00A0E888 /* BronarPad.mp3 */,
 				217D31D921D7136400A0E888 /* DarkBells.mp3 */,
-				210479FE21DC0EBD0094FE20 /* 02-Welwetowe Swetry.mp3 */,
-				21047A0021DC0EBD0094FE20 /* 03-Lewa Marsz.mp3 */,
-				21047A0121DC0EBD0094FE20 /* 04-Zapowiedz.mp3 */,
-				21047A0421DC0EBE0094FE20 /* 05-Wariat.mp3 */,
-				21047A0321DC0EBE0094FE20 /* 06-Szaolne Lato.mp3 */,
-				21047A0521DC0EBE0094FE20 /* 07-Permamentna Rewolucja.mp3 */,
-				210479FF21DC0EBD0094FE20 /* 11-Co Za Dzien.mp3 */,
-				21047A0221DC0EBE0094FE20 /* 13-Na Bliskim Wschodzie (Brak cover).mp3 */,
 				217D31DA21D7136400A0E888 /* Orgonite.mp3 */,
+				2169230221E2DC9E00E3A98D /* 07023360.wav */,
+				2169230321E2DC9E00E3A98D /* airplane-landing.mp3 */,
+				2169230421E2DC9E00E3A98D /* BOMB_SIREN.mp3 */,
+				2169230621E2DC9F00E3A98D /* muscle-car.mp3 */,
+				2169230521E2DC9F00E3A98D /* sos-morse-code.mp3 */,
 				217D31DB21D7136400A0E888 /* Synthesis.mp3 */,
 				2132A6D621D6AE3300F32C17 /* SampleAudio.mp3 */,
 			);
@@ -331,23 +322,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2169230B21E2DC9F00E3A98D /* muscle-car.mp3 in Resources */,
 				2151706721D513C3004D971F /* LaunchScreen.storyboard in Resources */,
+				2169230721E2DC9F00E3A98D /* 07023360.wav in Resources */,
+				2169230A21E2DC9F00E3A98D /* sos-morse-code.mp3 in Resources */,
+				2169230821E2DC9F00E3A98D /* airplane-landing.mp3 in Resources */,
 				2132A6D721D6AE3300F32C17 /* SampleAudio.mp3 in Resources */,
-				21047A0821DC0EBE0094FE20 /* 03-Lewa Marsz.mp3 in Resources */,
 				217D31DE21D7136400A0E888 /* Synthesis.mp3 in Resources */,
 				2151706221D513C1004D971F /* Main.storyboard in Resources */,
-				21047A0C21DC0EBE0094FE20 /* 05-Wariat.mp3 in Resources */,
-				21047A0A21DC0EBE0094FE20 /* 13-Na Bliskim Wschodzie (Brak cover).mp3 in Resources */,
-				21047A0721DC0EBE0094FE20 /* 11-Co Za Dzien.mp3 in Resources */,
 				217D31DC21D7136400A0E888 /* DarkBells.mp3 in Resources */,
-				21047A0921DC0EBE0094FE20 /* 04-Zapowiedz.mp3 in Resources */,
-				21047A0B21DC0EBE0094FE20 /* 06-Szaolne Lato.mp3 in Resources */,
 				215D75AC21D93EB700FD1728 /* turtle.png in Resources */,
 				217D31DD21D7136400A0E888 /* Orgonite.mp3 in Resources */,
-				21047A0621DC0EBE0094FE20 /* 02-Welwetowe Swetry.mp3 in Resources */,
 				2159174021D8D9C300CC8A1A /* Assets.xcassets in Resources */,
 				217D31D821D711EF00A0E888 /* BronarPad.mp3 in Resources */,
-				21047A0D21DC0EBE0094FE20 /* 07-Permamentna Rewolucja.mp3 in Resources */,
+				2169230921E2DC9F00E3A98D /* BOMB_SIREN.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,12 +431,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AwesomePlayer/Pods-AwesomePlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FDWaveformView/FDWaveformView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDWaveformView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
