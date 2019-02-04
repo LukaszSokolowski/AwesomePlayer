@@ -17,6 +17,12 @@
 		2151707D21D513C3004D971F /* AwesomePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2151707C21D513C3004D971F /* AwesomePlayerUITests.swift */; };
 		2159174021D8D9C300CC8A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2159173F21D8D9C200CC8A1A /* Assets.xcassets */; };
 		215D75AC21D93EB700FD1728 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 215D75AB21D93EB700FD1728 /* turtle.png */; };
+		2168D9D221FE9EAE00A8F3C9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2168D9CD21FE9EAE00A8F3C9 /* FBSDKCoreKit.framework */; };
+		2168D9D321FE9EAE00A8F3C9 /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2168D9CE21FE9EAE00A8F3C9 /* FacebookLogin.framework */; };
+		2168D9D421FE9EAE00A8F3C9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2168D9CF21FE9EAE00A8F3C9 /* FBSDKLoginKit.framework */; };
+		2168D9D521FE9EAE00A8F3C9 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2168D9D021FE9EAE00A8F3C9 /* FacebookCore.framework */; };
+		2168D9D621FE9EAE00A8F3C9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2168D9D121FE9EAE00A8F3C9 /* Bolts.framework */; };
+		2168D9D921FE9F6800A8F3C9 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2168D9D821FE9F6800A8F3C9 /* SocialViewController.swift */; };
 		2169230721E2DC9F00E3A98D /* 07023360.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2169230221E2DC9E00E3A98D /* 07023360.wav */; };
 		2169230821E2DC9F00E3A98D /* airplane-landing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2169230321E2DC9E00E3A98D /* airplane-landing.mp3 */; };
 		2169230921E2DC9F00E3A98D /* BOMB_SIREN.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2169230421E2DC9E00E3A98D /* BOMB_SIREN.mp3 */; };
@@ -66,6 +72,12 @@
 		2151707E21D513C3004D971F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2159173F21D8D9C200CC8A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		215D75AB21D93EB700FD1728 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
+		2168D9CD21FE9EAE00A8F3C9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		2168D9CE21FE9EAE00A8F3C9 /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = Carthage/Build/iOS/FacebookLogin.framework; sourceTree = "<group>"; };
+		2168D9CF21FE9EAE00A8F3C9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2168D9D021FE9EAE00A8F3C9 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
+		2168D9D121FE9EAE00A8F3C9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		2168D9D821FE9F6800A8F3C9 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		2169230221E2DC9E00E3A98D /* 07023360.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07023360.wav; sourceTree = "<group>"; };
 		2169230321E2DC9E00E3A98D /* airplane-landing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "airplane-landing.mp3"; sourceTree = "<group>"; };
 		2169230421E2DC9E00E3A98D /* BOMB_SIREN.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BOMB_SIREN.mp3; sourceTree = "<group>"; };
@@ -91,6 +103,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02A591C5A1272C096DB2939 /* Pods_AwesomePlayer.framework in Frameworks */,
+				2168D9D221FE9EAE00A8F3C9 /* FBSDKCoreKit.framework in Frameworks */,
+				2168D9D321FE9EAE00A8F3C9 /* FacebookLogin.framework in Frameworks */,
+				2168D9D421FE9EAE00A8F3C9 /* FBSDKLoginKit.framework in Frameworks */,
+				2168D9D521FE9EAE00A8F3C9 /* FacebookCore.framework in Frameworks */,
+				2168D9D621FE9EAE00A8F3C9 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +133,11 @@
 		13F0B1AF72611CE9D23A7420 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2168D9D121FE9EAE00A8F3C9 /* Bolts.framework */,
+				2168D9D021FE9EAE00A8F3C9 /* FacebookCore.framework */,
+				2168D9CE21FE9EAE00A8F3C9 /* FacebookLogin.framework */,
+				2168D9CD21FE9EAE00A8F3C9 /* FBSDKCoreKit.framework */,
+				2168D9CF21FE9EAE00A8F3C9 /* FBSDKLoginKit.framework */,
 				BEC7F31012B865D3E2082CD3 /* Pods_AwesomePlayer.framework */,
 				FE1E0326742304189647CF4C /* Pods_AwesomePlayerTests.framework */,
 				FCA9B95D9C4A4CA4D8F8F4F8 /* Pods_AwesomePlayerUITests.framework */,
@@ -152,6 +174,7 @@
 				2151705C21D513C1004D971F /* FirstViewController.swift */,
 				2151705E21D513C1004D971F /* SecondViewController.swift */,
 				2151706021D513C1004D971F /* Main.storyboard */,
+				2168D9D821FE9F6800A8F3C9 /* SocialViewController.swift */,
 				2159173F21D8D9C200CC8A1A /* Assets.xcassets */,
 				2151706521D513C3004D971F /* LaunchScreen.storyboard */,
 				215D75AB21D93EB700FD1728 /* turtle.png */,
@@ -221,6 +244,7 @@
 				2151705421D513C1004D971F /* Frameworks */,
 				2151705521D513C1004D971F /* Resources */,
 				CE97B6F57431943CB001D8ED /* [CP] Embed Pods Frameworks */,
+				2168D9D721FE9EBD00A8F3C9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -400,6 +424,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2168D9D721FE9EBD00A8F3C9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FacebookCore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSDKCoreKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FacebookLogin.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSDKLoginKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		AE525251FA7C0923DDC84B9A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,16 +477,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AwesomePlayer/Pods-AwesomePlayer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FDWaveformView/FDWaveformView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDWaveformView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +500,7 @@
 				2151705F21D513C1004D971F /* SecondViewController.swift in Sources */,
 				2151705B21D513C1004D971F /* AppDelegate.swift in Sources */,
 				2151705D21D513C1004D971F /* FirstViewController.swift in Sources */,
+				2168D9D921FE9F6800A8F3C9 /* SocialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +678,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5DG6HE4MZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AwesomePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -654,6 +701,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5DG6HE4MZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AwesomePlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

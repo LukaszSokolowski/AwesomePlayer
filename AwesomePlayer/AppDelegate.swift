@@ -8,6 +8,8 @@
 
 import UIKit
 import UserNotifications
+import FacebookLogin
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("oks")
             }
         }
-        return true
+        
+         let isFBSDKLaunched = SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        return isFBSDKLaunched
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

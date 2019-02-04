@@ -249,19 +249,52 @@
         <!--Social-->
         <scene sceneID="5D5-HL-99w">
             <objects>
-                <viewController id="0qI-oj-68A" sceneMemberID="viewController">
+                <viewController id="0qI-oj-68A" customClass="SocialViewController" customModule="AwesomePlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCe-Q7-7PB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQI-gQ-0SQ">
+                                <rect key="frame" x="128.66666666666666" y="95" width="156.99999999999997" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="106-HB-0Q3"/>
+                                    <constraint firstAttribute="width" constant="157" id="6Vv-JG-Etm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                <state key="normal" title="Facebook login ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="0qI-oj-68A" eventType="touchUpInside" id="Sns-BZ-QAL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a02-3S-gFa">
+                                <rect key="frame" x="132" y="155" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="YJv-aL-vLf"/>
+                                    <constraint firstAttribute="height" constant="150" id="rxZ-nV-k4D"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vQI-gQ-0SQ" firstAttribute="centerX" secondItem="hCe-Q7-7PB" secondAttribute="centerX" id="438-Dd-PDk"/>
+                            <constraint firstItem="a02-3S-gFa" firstAttribute="centerX" secondItem="hCe-Q7-7PB" secondAttribute="centerX" id="KiA-Ys-Crc"/>
+                            <constraint firstItem="vQI-gQ-0SQ" firstAttribute="top" secondItem="8dr-9U-RBD" secondAttribute="top" constant="75" id="c8P-Q1-0Ns"/>
+                            <constraint firstItem="a02-3S-gFa" firstAttribute="top" secondItem="vQI-gQ-0SQ" secondAttribute="bottom" constant="8" id="cOY-BH-TKm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8dr-9U-RBD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Social" id="meq-DS-gZw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="facebookButton" destination="vQI-gQ-0SQ" id="prc-Aw-aYi"/>
+                        <outlet property="profilePicture" destination="a02-3S-gFa" id="h9C-00-btc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEM-Xi-fuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="752"/>
+            <point key="canvasLocation" x="808.69565217391312" y="751.63043478260875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
