@@ -45,18 +45,25 @@ class SocialViewController: UIViewController  {
                         self.idUser = userID
                     }
                 }
-                
                 let url = URL(string: self.urlForImage)
                 let data = try? Data(contentsOf: url!)
-                
                 if let imageData = data {
                     let image = UIImage(data: imageData)
                     self.profilePicture.image = image
-                    self.profilePicture.reloadInputViews()
-                    self.profilePicture.isHidden = false
+                    self.setupImageView()
                 }
             }
         }
+    }
+    
+    func setupImageView() {
+        self.profilePicture.reloadInputViews()
+        self.profilePicture.isHidden = false
+        self.profilePicture.layer.borderWidth = 1.0
+        self.profilePicture.layer.masksToBounds = false
+        self.profilePicture.layer.borderColor = UIColor.white.cgColor
+        self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width / 2
+        self.profilePicture.clipsToBounds = true
     }
 }
 
